@@ -1,0 +1,35 @@
+name: ProdVerdict
+description: >
+  Deterministic production contract checks for AI-assisted SaaS. Verifies Stripe
+  subscription state matches app access controls (access contract) and environment
+  variables are correctly declared (config contract). Posts findings as PR comments.
+author: prodv-dev
+branding:
+  icon: shield
+  color: green
+
+inputs:
+  config:
+    description: Path to prodverdict.yml relative to the repository root
+    required: false
+    default: ./prodverdict.yml
+  contract:
+    description: Contract to run — "access" (Stripe vs DB) or "config" (env vars)
+    required: false
+    default: access
+  strict:
+    description: Fail the check when only medium/low severity findings exist (warn verdict)
+    required: false
+    default: 'false'
+
+outputs:
+  verdict:
+    description: pass, warn, or fail
+  findings_count:
+    description: Number of findings returned
+  result_json:
+    description: Full check result as JSON
+
+runs:
+  using: node20
+  main: dist/index.js

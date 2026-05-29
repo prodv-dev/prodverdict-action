@@ -1,0 +1,18 @@
+{
+  "name": "prodverdict-action",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub Action for ProdVerdict production contract checks",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prodv-dev/prodverdict-action.git"
+  },
+  "homepage": "https://prodverdict.com",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@prodverdict/engine": "0.1.0"
+  }
+}
