@@ -1,8 +1,5 @@
 name: ProdVerdict
-description: >
-  Deterministic production contract checks for AI-assisted SaaS. Verifies Stripe
-  subscription state matches app access controls (access contract) and environment
-  variables are correctly declared (config contract). Posts findings as PR comments.
+description: Deterministic Stripe vs database access checks for AI-assisted SaaS. Catch revenue leaks in CI.
 author: prodv-dev
 branding:
   icon: shield
